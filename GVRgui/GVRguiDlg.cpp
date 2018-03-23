@@ -149,8 +149,9 @@ char	m_czResultLog[100]="";
 char	m_czTapeLog[100]="";
 
 
-
+//test
 // CAboutDlg dialog used for App About
+
 
 class CAboutDlg : public CDialog
 {
