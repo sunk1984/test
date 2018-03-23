@@ -1,0 +1,52 @@
++00:01.54        Model: M15758A002
++00:01.54     Revision: C
++00:01.54       Serial: IN175000020
++00:01.54          MAC: 01:02:03:04:05:06
++00:01.54    Timestamp: 20180125111931
++00:01.54 ----------------------------------------
+
++00:01.54 Power On...
++00:01.74 Send: I
++00:03.73 <PASS>
++00:03.73 Power On...
++00:04.12 Send: N
++00:04.81 <PASS>
++00:04.10 Send: Y
++00:05.87 <DONE>
++00:05.87 Impeadance Test/Power On------------PASS
++00:05.87 Checking voltages...
++00:06.06 Send: V
++00:06.81 <PASS>
++00:06.81 Voltages----------------------------PASS
++00:06.81 KL82 Programming...
++00:06.10 KL82 Programming
++00:08.28 KL82 Programming--------------------PASS
++00:08.28 Checking reset...
++00:09.68 Send: W
++00:10.54 Reset test
++00:10.54 Reset test--------------------------PASS
++00:10.54 Battery test...
++00:10.74 Send: B
++00:11.48 <PASS>
++00:11.48 Battery Test------------------------PASS
++00:11.48 U-Boot test...
++00:11.68 Send: H
++00:12.11 <PASS>
++00:12.11 U-Boot Test-------------------------PASS
++00:12.11 EEPROM programming...
++00:12.31 EEPROM programming...
++00:12.31    Board Version: C
++00:12.31 Software Version: 
++00:12.31    Serial Number: IN175000020
++00:12.31      MAC Address: 01:02:03:04:05:06
++00:12.31  Manufacture Lot: 180125r
++00:12.31 Send: P a=M15758A002 c=Verifone i=3 b=C v= p=1 0=01:02:03:04:05:06 n=IN175000020 d=180125 
++00:14.90 <PASS>
++00:14.90 EEPROM Programming------------------FAIL
++00:14.90 
+          *** TEST FAILED ***
++00:14.90 Powering OFF...
++00:14.90 Send: F
++00:14.34 Message Timeout!
++00:14.34 +00:14.35 ** TEST FAILED **
+

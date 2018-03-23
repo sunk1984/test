@@ -1,0 +1,285 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\GVRgui.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\GVRgui.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Omnia"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Omina Test",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2018 VFI",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_GVRGUI_DIALOG DIALOGEX 0, 0, 383, 312
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_APPWINDOW
+CAPTION "Omnia Test"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_SERIAL,106,232,24,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PRINTER,106,248,24,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_STATION,107,263,18,12,ES_UPPERCASE | ES_AUTOHSCROLL
+    CONTROL         "Program KL82",IDC_KL82,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,33,172,107,11
+    CHECKBOX        "Program EEPROM",IDC_EEPROM,33,186,119,10
+    CHECKBOX        "Stop On Fail",IDC_STOP,33,199,119,10
+    DEFPUSHBUTTON   "Start",IDOK2,42,51,50,16
+    DEFPUSHBUTTON   "Stop",IDOK3,98,51,50,16,WS_DISABLED
+    PUSHBUTTON      "Reset",IDOK4,42,70,50,16
+    PUSHBUTTON      "Exit",IDOK,98,70,50,16
+    CONTROL         "M15758A001",IDC_A001,"Button",BS_AUTORADIOBUTTON,30,107,67,12
+    CONTROL         "M15758A002",IDC_A002,"Button",BS_AUTORADIOBUTTON,30,121,66,12
+    EDITTEXT        IDC_REV,70,135,10,12,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_STATUS,6,288,177,16,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY,WS_EX_DLGMODALFRAME
+    LTEXT           "Status",IDC_STATIC,10,294,31,10
+    RTEXT           "Fixture Serial Port:",IDC_STATIC,25,233,79,11
+    RTEXT           "Printer Port:",IDC_STATIC,60,249,42,11
+    LTEXT           "00:00",IDC_TIME,92,22,28,11
+    RTEXT           "Station ID:",IDC_STATIC,60,264,42,11
+    LTEXT           "",IDC_RESULT,186,7,190,297,SS_SUNKEN | WS_BORDER,WS_EX_DLGMODALFRAME | WS_EX_STATICEDGE
+    RTEXT           "Elapsed time:",IDC_STATIC,33,22,56,9
+    RTEXT           "Average time:",IDC_STATIC,33,33,56,9
+    LTEXT           "",IDC_AVERAGE,92,33,28,11
+    GROUPBOX        "Configuration",IDC_STATIC,26,221,114,58
+    GROUPBOX        "Test Options",IDC_STATIC,25,161,131,53
+    GROUPBOX        "Device",IDC_STATIC,26,98,75,53
+    RTEXT           "Revision:",IDC_REV1,33,137,35,10
+END
+
+IDD_MESSAGE_DIALOG DIALOGEX 0, 0, 211, 70
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Dialog"
+FONT 10, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "OK",IDOK,117,49,32,14,NOT WS_VISIBLE
+    PUSHBUTTON      "FAIL",IDOK2,148,49,41,14,NOT WS_VISIBLE
+    PUSHBUTTON      "PASS",IDOK3,77,49,41,14,NOT WS_VISIBLE
+    CTEXT           "",IDC_MESSAGE,55,7,134,27
+    CONTROL         129,IDC_ALERT,"Static",SS_BITMAP | NOT WS_VISIBLE,7,7,39,39
+    CONTROL         130,IDC_PASS,"Static",SS_BITMAP | NOT WS_VISIBLE,7,7,39,39
+    CONTROL         131,IDC_FAIL,"Static",SS_BITMAP | NOT WS_VISIBLE,7,7,39,39
+    CONTROL         132,IDC_PROMPT,"Static",SS_BITMAP | NOT WS_VISIBLE,7,7,39,39
+    EDITTEXT        IDC_SCAN,84,27,80,12,ES_CENTER | ES_UPPERCASE | NOT WS_VISIBLE
+    CONTROL         133,IDC_DOSCAN,"Static",SS_BITMAP | NOT WS_VISIBLE,7,7,39,39
+    CONTROL         134,IDC_ERROR,"Static",SS_BITMAP | NOT WS_VISIBLE,7,7,39,39
+    CONTROL         135,IDC_GPASS,"Static",SS_BITMAP | SS_CENTERIMAGE | SS_REALSIZEIMAGE | NOT WS_VISIBLE,83,16,106,21
+    CONTROL         136,IDC_RFAIL,"Static",SS_BITMAP | SS_CENTERIMAGE | SS_REALSIZEIMAGE | NOT WS_VISIBLE,83,16,106,21
+    CONTROL         137,IDC_ADMIN,"Static",SS_BITMAP | NOT WS_VISIBLE,7,7,39,39
+    PUSHBUTTON      "CANCEL",ID_CAN,65,49,36,14,NOT WS_VISIBLE
+END
+
+IDD_TEST_DIALOG DIALOGEX 0, 0, 463, 258
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Program the KL82"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "FAIL",IDCANCEL,399,167,50,24
+    PUSHBUTTON      "PASS",IDOK,399,204,50,24
+    CONTROL         151,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,7,7,380,238
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Verifone Systems Inc"
+            VALUE "FileDescription", "Omina Test"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Omina.exe"
+            VALUE "LegalCopyright", "Verifone Systems Inc"
+            VALUE "OriginalFilename", "Omnia.exe"
+            VALUE "ProductName", "Omnia"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_GVRGUI_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 376
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 304
+    END
+
+    IDD_MESSAGE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 189
+        TOPMARGIN, 7
+    END
+
+    IDD_TEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 449
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 245
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "res\\Alert.bmp"
+IDB_BITMAP2             BITMAP                  "res\\Pass.bmp"
+IDB_BITMAP3             BITMAP                  "res\\Fail.bmp"
+IDB_BITMAP4             BITMAP                  "res\\YesNo.bmp"
+IDB_BITMAP5             BITMAP                  "res\\Scan.bmp"
+IDB_BITMAP6             BITMAP                  "res\\Error.bmp"
+IDB_BITMAP7             BITMAP                  "res\\GreenPass.bmp"
+IDB_BITMAP8             BITMAP                  "res\\RedFail.bmp"
+IDB_BITMAP9             BITMAP                  "res\\brains.bmp"
+IDB_BITMAP10            BITMAP                  "res\\bitmap10.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About GVRgui..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\GVRgui.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
