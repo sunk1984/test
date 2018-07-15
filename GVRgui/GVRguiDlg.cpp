@@ -111,8 +111,8 @@ bool	m_bFixturePortOpen=false;	//Fixture port
 bool	m_bPrinterOpen=false;		//Printer port
 bool	m_bProgKL82=true;
 bool	m_bProgEEPROM=true;
-bool	m_bA001=true;
-bool	m_bA002=false;
+bool	m_bA001= false;
+bool	m_bA002= true;
 int		m_iStatus=TEST_IDLE;
 
 int		m_iFixturePort=84;			//Fixture port
@@ -588,7 +588,7 @@ void CGVRguiDlg::OnBnClickedOk2()
 	if(runningResult)	//If Serial
 	{
 		//Create logs
-		sprintf(&m_czResultLog[0],"./log/result/Ominia_%s_%s_%s.log",&m_czUUTserial[0],&m_czIsoTime[0],&m_czStation[0]); 
+		sprintf(&m_czResultLog[0],"./log/result/Omnia_%s_%s_%s.log",&m_czUUTserial[0],&m_czIsoTime[0],&m_czStation[0]); 
 		sprintf(&m_czTapeLog[0],"./log/tape/TapeLog_%s_%s_%s.log",&m_czUUTserial[0],&m_czIsoTime[0],&m_czStation[0]);
 		//Begin
 		m_bTestRunning=true;
@@ -692,7 +692,7 @@ void CGVRguiDlg::OnBnClickedOk2()
 						ShowMessage(MESSAGE_OK,"Please Click, OK, then Press the Reset Button on the card under test.");
 						ToLog("Send: W\r\n",false);
 						localResult=SendUUT("W\r\n","<PASS>",WAIT_15S);
-						sprintf(&m_czPrintBuffer[0],"Reset test\r\n");
+						//sprintf(&m_czPrintBuffer[0],"Reset test\r\n");
 						Console->Write(&m_czPrintBuffer[0]);
 						ToLog(&m_czPrintBuffer[0],false);
 						runningResult=localResult;
@@ -738,7 +738,7 @@ void CGVRguiDlg::OnBnClickedOk2()
 						SetStatus("EEPROM programming...");
 						//Show info
 						if(m_bA001) sprintf(&m_czPrintBuffer[0],"          Device: M15758A001\r\n");
-						if(m_bA001) sprintf(&m_czPrintBuffer[0],"          Device: M15758A002\r\n");
+						if(m_bA002) sprintf(&m_czPrintBuffer[0],"          Device: M15758A002\r\n");
 						ToLog(&m_czPrintBuffer[0],false);
 						sprintf(&m_czPrintBuffer[0],"   Board Version: %s\r\n",&m_czBoardVer[0]);
 						ToLog(&m_czPrintBuffer[0],false);
@@ -908,7 +908,7 @@ void CGVRguiDlg::OnBnClickedOk2()
 					{
 						SetStatus("Ethernet Switch test...");
 						ToLog("Send: E\r\n",false);
-						localResult=SendUUT("E\r\n","<PASS>",WAIT_15S);
+						localResult=SendUUT("E\r\n","<PASS>", WAIT_30S);
 						Console->Write(&m_czPrintBuffer[0]);
 						ToLog(&m_czPrintBuffer[0],false);
 						runningResult=localResult;
@@ -1221,8 +1221,8 @@ void CGVRguiDlg::SetControls(int Status)
 		GetDlgItem(IDC_KL82)->EnableWindow(true);		//Enable KL82 programming
 		GetDlgItem(IDC_STOP)->EnableWindow(true);		//Enable Stop on fail
 		GetDlgItem(IDC_EEPROM)->EnableWindow(true);		//Enable EEPROM programming
-		GetDlgItem(IDC_A001)->EnableWindow(true);		//Enable Select A001
-		GetDlgItem(IDC_A002)->EnableWindow(true);		//Enable Select A002
+		GetDlgItem(IDC_A001)->EnableWindow(false);		//Enable Select A001
+		GetDlgItem(IDC_A002)->EnableWindow(false);		//Enable Select A002
 		GetDlgItem(IDC_REV1)->EnableWindow(true);		//Enable Revision
 		GetDlgItem(IDC_REV)->EnableWindow(true);		// "  :"
 	}
@@ -1374,7 +1374,9 @@ bool CGVRguiDlg::GetINI(void)
 	static_cast<CButton*>(GetDlgItem(IDC_KL82))->SetCheck(true);	
 	static_cast<CButton*>(GetDlgItem(IDC_STOP))->SetCheck(true);
 	static_cast<CButton*>(GetDlgItem(IDC_EEPROM))->SetCheck(true);
-	static_cast<CButton*>(GetDlgItem(IDC_A001))->SetCheck(true);
+	static_cast<CButton*>(GetDlgItem(IDC_A002))->SetCheck(true);
+	GetDlgItem(IDC_A001)->EnableWindow(false);		//Enable Select A001
+	GetDlgItem(IDC_A002)->EnableWindow(false);		//Enable Select A002
 	doWait(100);
 	m_bConfEnable=true;
 

@@ -1,9 +1,9 @@
 ﻿  GVRguiDlg.cpp
-GVRguiDlg.cpp(549): warning C4477: 'sprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'wchar_t *'
-  GVRguiDlg.cpp(549): note: consider using '%ls' in the format string
-  GVRguiDlg.cpp(549): note: consider using '%lls' in the format string
-  GVRguiDlg.cpp(549): note: consider using '%Ls' in the format string
-  GVRguiDlg.cpp(549): note: consider using '%ws' in the format string
+GVRguiDlg.cpp(550): warning C4477: 'sprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'wchar_t *'
+  GVRguiDlg.cpp(550): note: consider using '%ls' in the format string
+  GVRguiDlg.cpp(550): note: consider using '%lls' in the format string
+  GVRguiDlg.cpp(550): note: consider using '%Ls' in the format string
+  GVRguiDlg.cpp(550): note: consider using '%ws' in the format string
   Generating code
   1 of 355 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
